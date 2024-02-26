@@ -12,14 +12,7 @@
 <header id="header">
     <div class="header-container">
         <section class="icon">
-            <a href="">Blog</a>
-        </section>
-        <section class="navigation">
-            <ul>
-                <li><a href="">新着記事</a></li>
-                <li><a href="">カテゴリー</a></li>
-                <li><a href="">おすすめ</a></li>
-            </ul>
+            <a href="{{ url('/') }}">Blog</a>
         </section>
     </div>
 </header>
