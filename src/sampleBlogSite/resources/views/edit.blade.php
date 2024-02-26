@@ -25,7 +25,7 @@
             </li>
             <li>
               <h3>記事本文</h3>
-              <div id="quill-editor"></div>
+              <div id="quill-editor">{!! $articles[0]->content !!}</div>
               <input type="hidden" name="content">
             </li>
             <li>
