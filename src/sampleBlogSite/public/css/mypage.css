@@ -1,0 +1,18 @@
+.mypage-wrapper {
+  width: 80%;
+  margin: 0 auto;
+}
+.mypage-wrapper dl dt {
+  font-size: 1.4em;
+}
+.mypage-wrapper dl dd {
+  font-size: 1.2em;
+}
+.mypage-wrapper .btn-container {
+  border: solid 1px black;
+  display: inline-block;
+}
+.mypage-wrapper .btn-container:hover {
+  background: black;
+  color: white;
+}/*# sourceMappingURL=mypage.css.map */

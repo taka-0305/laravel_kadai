@@ -1,0 +1,22 @@
+
+
+.mypage-wrapper{
+  width: 80%;
+  margin: 0 auto;
+  dl{
+    dt{
+      font-size: 1.4em;
+    }
+    dd{
+      font-size: 1.2em;
+    }
+  }
+  .btn-container{
+    border: solid 1px black;
+    display: inline-block;
+    &:hover{
+      background: black;
+      color: white;
+    }
+  }
+}

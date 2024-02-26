@@ -1,0 +1,339 @@
+html {
+  font-size: 62.5%;
+}
+
+:root {
+  --background-color: gray;
+  --base-color: white;
+  --accent-color: skyblue;
+}
+
+.admin-bar {
+  background: black;
+  color: white;
+  padding: 1em 5%;
+}
+.admin-bar ul li {
+  display: inline-block;
+  margin-right: 3em;
+}
+.admin-bar ul li a {
+  font-size: 1.6em;
+  font-weight: bold;
+  line-height: 2;
+}
+
+#header {
+  width: 100%;
+  height: 80px;
+  background: var(--base-color);
+}
+#header .header-container {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10%;
+}
+#header .header-container .icon a {
+  font-size: 3em;
+  font-weight: bold;
+}
+#header .header-container .navigation ul li {
+  display: inline-block;
+  margin-left: 2em;
+}
+#header .header-container .navigation ul li.btn {
+  padding: 1em;
+  box-shadow: 1px 1px 5px rgba(85, 85, 85, 0.3);
+  border: solid 1px #555;
+}
+#header .header-container .navigation ul li:first-child {
+  margin-left: 0;
+}
+#header .header-container .navigation ul li a {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: black;
+  width: 100%;
+  height: 80px;
+}
+footer p {
+  font-size: 2em;
+  font-weight: bold;
+  color: white;
+}
+
+body {
+  background: var(--background-color);
+}
+body .container {
+  width: 80%;
+  margin: 100px auto;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+body .container .main-contents {
+  width: 65%;
+  margin-right: 5%;
+}
+body .container .sidebar {
+  flex: 1;
+}
+
+.article {
+  background: white;
+  width: 65%;
+  margin-right: 5%;
+}
+.article-container {
+  padding: 5%;
+}
+.article-container .thumbnail {
+  width: 100%;
+  aspect-ratio: 16/9;
+}
+.article-container .thumbnail img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.article-container .text {
+  line-height: 2.5;
+}
+.article-container .text h1, .article-container .text h2, .article-container .text h3, .article-container .text h4 {
+  font-weight: bold;
+}
+.article-container .text h1 {
+  font-size: 3em;
+}
+.article-container .text h2 {
+  font-size: 2.4em;
+}
+.article-container .text h3 {
+  font-size: 2em;
+}
+.article-container .text p {
+  font-size: 1.6em;
+}
+.article-container .text a {
+  color: red;
+}
+.article-container .text a:hover {
+  opacity: 0.6;
+}
+
+.sidebar .sidebar-container {
+  padding: 5em 0;
+  position: sticky;
+  top: 0;
+}
+.sidebar .sidebar-container .profile {
+  background: var(--base-color);
+  padding: 5em 0;
+  border-radius: 1em;
+}
+.sidebar .sidebar-container .profile .image {
+  width: 60%;
+  margin: 0 auto;
+  aspect-ratio: 1/1;
+}
+.sidebar .sidebar-container .profile .image-container {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.sidebar .sidebar-container .profile .image-container img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+}
+.sidebar .sidebar-container .profile .name {
+  margin: 4em auto;
+  text-align: center;
+}
+.sidebar .sidebar-container .profile .name h3 {
+  font-size: 2em;
+  position: relative;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.sidebar .sidebar-container .profile .name h3::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30%;
+  background: var(--accent-color);
+  height: 4px;
+  border-radius: 2px;
+}
+.sidebar .sidebar-container .profile .description {
+  margin: 2em auto;
+}
+.sidebar .sidebar-container .profile .description p {
+  font-size: 1.2em;
+  line-height: 2;
+}
+.sidebar .sidebar-container .recommend {
+  background: var(--base-color);
+  margin-top: 5em;
+  border-radius: 1em;
+}
+.sidebar .sidebar-container .recommend .section-title {
+  background: var(--accent-color);
+  text-align: center;
+  border-radius: 1em 1em 0 0;
+  padding: 2em 0;
+}
+.sidebar .sidebar-container .recommend .section-title p {
+  font-size: 2em;
+  font-weight: bold;
+  color: var(--base-color);
+}
+.sidebar .sidebar-container .recommend .list {
+  padding: 5em 0;
+}
+.sidebar .sidebar-container .recommend .list ul {
+  width: 80%;
+  margin: 0 auto;
+}
+.sidebar .sidebar-container .recommend .list ul li .image {
+  width: 100%;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+}
+.sidebar .sidebar-container .recommend .list ul li .image a img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transform: scale(1);
+  transition: transform 0.5s;
+}
+.sidebar .sidebar-container .recommend .list ul li .image a img:hover {
+  transform: scale(1.1);
+}
+.sidebar .sidebar-container .recommend .list ul li .text {
+  margin: 1em auto;
+}
+.sidebar .sidebar-container .recommend .list ul li .text .title a h3 {
+  font-size: 1.4em;
+  line-height: 2;
+  transition: opacity 0.5s;
+}
+.sidebar .sidebar-container .recommend .list ul li .text .title a h3:hover {
+  opacity: 0.6;
+}
+.sidebar .sidebar-container .recommend .list ul li .text .date {
+  margin-top: 1em;
+}
+.sidebar .sidebar-container .recommend .list ul li .text .date time {
+  font-size: 1.2em;
+  color: gray;
+}
+
+.main-contents-container {
+  padding: 5em 0;
+}
+.main-contents-container ul li {
+  background: var(--base-color);
+  width: 100%;
+  padding: 5em 5%;
+  margin-top: 10em;
+}
+.main-contents-container ul li:first-child {
+  margin-top: 0;
+}
+.main-contents-container ul li .image {
+  width: 100%;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+}
+.main-contents-container ul li .image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transform: scale(1);
+  transition: transform 0.5s;
+}
+.main-contents-container ul li .image img:hover {
+  transform: scale(1.1);
+}
+.main-contents-container ul li .text {
+  margin: 1em auto;
+}
+.main-contents-container ul li .text .title h2 {
+  font-size: 1.6em;
+  font-weight: bold;
+  line-height: 2;
+  transition: opacity 0.5s;
+}
+.main-contents-container ul li .text .title h2:hover {
+  opacity: 0.6;
+}
+.main-contents-container ul li .text .date {
+  margin-top: 1em;
+}
+.main-contents-container ul li .text .date time {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: gray;
+}
+
+.admin {
+  width: 100%;
+  background: var(--base-color);
+  padding: 5%;
+}
+.admin-container .title h2 {
+  font-size: 3em;
+  font-weight: bold;
+}
+.admin-container form {
+  margin: 5em 0;
+}
+.admin-container form ul li {
+  margin-bottom: 3em;
+}
+.admin-container form ul li h3 {
+  font-size: 1.6em;
+  margin-bottom: 1em;
+  font-weight: bold;
+}
+.admin-container form ul li input, .admin-container form ul li select {
+  font-size: 1.6em;
+  padding: 1em 0.8em;
+  background: #d7d7d7;
+  border-radius: 0.6em;
+  width: 50%;
+}
+.admin-container form ul li #quill-editor {
+  height: 40vh;
+}
+.admin-container form ul li .btn {
+  display: flex;
+}
+.admin-container form ul li .btn button {
+  padding: 0.5em 1em;
+  border: solid 1px black;
+  font-size: 1.6em;
+  border-radius: 0.6em;
+  margin-right: 2em;
+}
+.admin-container form ul li .btn button:hover {
+  background: black;
+  color: var(--base-color);
+}/*# sourceMappingURL=style.css.map */
