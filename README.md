@@ -40,6 +40,7 @@ docker compose up -d
 srcの中にあるsampleBLogSiteフォルダに移動し、.env.exampleをコピーして.envファイルを作成する。  
 DB設定を以下のようにする。
 ```
+DB_HOST=db
 DB_DATABASE=laravel
 DB_USERNAME=user
 DB_PASSWORD=password
