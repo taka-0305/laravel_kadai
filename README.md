@@ -37,6 +37,13 @@ docker compose up -d
  ✔ Container sitetest-php-1                Started
  ✔ Container sitetest-nginx-1              Started
 ```
+srcの中にあるsampleBLogSiteフォルダに移動し、.env.exampleをコピーして.envファイルを作成する。  
+DB設定を以下のようにする。
+```
+DB_DATABASE=laravel
+DB_USERNAME=user
+DB_PASSWORD=password
+```
 成功したら生成したPHPのコンテナ内に入る。
 ```
 docker-compose exec php bash
