@@ -47,8 +47,8 @@
         <td>{{$article->id}}</td>
         <td>{{$article->title}}</td>
         <td>{{$article->created_at->format('Y.m.d')}}</td>
-        <td><a href="{{route('article.show', ['article' =>  $article->article_id])}}" class="btn btn-primary">詳細</a></td>
-        <td><a href="{{route('article.edit', ['article' =>  $article->article_id])}}" class="btn btn-info">編集</a></td>
+        <td><a href="{{route('article.show', ['article' =>  $article->id])}}" class="btn btn-primary">詳細</a></td>
+        <td><a href="{{route('article.edit', ['article' =>  $article->id])}}" class="btn btn-info">編集</a></td>
       </tr>
       @endforeach
     </tbody>

@@ -17,13 +17,13 @@ services:
       - php
 
   db:
-    container_name: mysql_container
+    container_name: laravel_mysql_container
     image: mysql:5.7
     environment:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: laravel
-      MYSQL_USER: root
-      MYSQL_PASSWORD: root
+      MYSQL_USER: user
+      MYSQL_PASSWORD: password
       TZ: 'Asia/Tokyo'
     command: mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
     volumes:
@@ -33,6 +33,7 @@ services:
     ports:
       - 3306:3306
 
+
   node:
     image: node:12.13-alpine
     tty: true
@@ -41,7 +42,7 @@ services:
     working_dir: /var/www
 
   phpmyadmin:
-    container_name: phpmyadmin_container
+    container_name: laravel_phpmyadmin_container
     image: phpmyadmin/phpmyadmin
     environment:
       - PMA_ARBITRARY=1

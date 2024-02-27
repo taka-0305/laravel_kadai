@@ -6,6 +6,7 @@ use App\Models\Article;
 use App\Models\Profile;
 use App\Models\Images;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class ArticleController extends Controller
 {
@@ -17,6 +18,7 @@ class ArticleController extends Controller
     public function index()
     {
         $articles = Article::select([
+            'a.id',
             'a.article_id',
             'a.title',
             'i.file_name',
@@ -95,7 +97,7 @@ class ArticleController extends Controller
             ->leftJoin('images as i', function($join) {
                 $join->on('i.id', '=', 'a.images_id');
             })
-            ->where('a.article_id', '=', $article->id)
+            ->where('a.id', '=', $article->id)
             ->get();
             $profile = Profile::select([
                 'p.id',
@@ -132,7 +134,7 @@ class ArticleController extends Controller
             ->leftJoin('images as i', function($join) {
                 $join->on('i.id', '=', 'a.images_id');
             })
-            ->where('a.article_id', '=', $article->id)
+            ->where('a.id', '=', $article->id)
             ->get();
         $items = Images::get();
         return view('edit', compact('articles','items'));

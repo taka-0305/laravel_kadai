@@ -17,7 +17,7 @@
         @foreach ($articles as $article)
         <li>
           <section class="image">
-            <a href="{{route('article.show', ['article' =>  $article->article_id])}}">
+            <a href="{{route('article.show', ['article' =>  $article->id])}}">
               <img src="{{asset('/img/'.$article->file_name)}}" alt="サムネイル画 像">
             </a>
           </section>
