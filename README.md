@@ -59,7 +59,7 @@ root@f19639a6fd34:/var/www/sampleBlogSite# composer install
 ```
 インストール出来たらAPP_KEYを更新する
 ```
-php artisan key:generate
+root@f19639a6fd34:/var/www/sampleBlogSite# php artisan key:generate
 ```
 データベースのテーブルを生成するためにマイグレーションを行う
 ```
