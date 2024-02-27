@@ -76,19 +76,14 @@ Laravelプロジェクトのあるファイルに移動する
 ```
 cd ./src/sampleBlogSite
 ```
-npm run devを実行するとログイン機能などが利用できる。
-```
-npm run dev
-```
-```
-'vite' は、内部コマンドまたは外部コマンド、
-操作可能なプログラムまたはバッチ ファイルとして認識されていません。
-```
-と表示される場合は
+Viteのセットアップを行う。
 ```
 npm install vite --save-dev
 ```
-としてからnpm run devを行う。  
+npm run devを実行するとログイン機能などが利用できる。
+```
+npm run dev
+``` 
 
 ここまで来たら  
 http://localhost/ にアクセスして起動できるか確認する。  
