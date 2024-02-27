@@ -56,7 +56,11 @@ root@f19639a6fd34:/var/www# cd ./sampleBlogSite
 ```
 root@f19639a6fd34:/var/www/sampleBlogSite# composer install
 ```
-インストール出来たらデータベースのテーブルを生成するためにマイグレーションを行う
+インストール出来たらAPP_KEYを更新する
+```
+php artisan key:generate
+```
+データベースのテーブルを生成するためにマイグレーションを行う
 ```
 root@f19639a6fd34:/var/www/sampleBlogSite# php artisan migrate
 ```
